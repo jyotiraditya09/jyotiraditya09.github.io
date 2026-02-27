@@ -109,7 +109,7 @@ export const research = [
     title: 'ML Research Assistant - LLM Compression',
     institution: 'Department of Computer Science, UofT',
     advisor: 'Prof. Maryam Dehnavi (Principal at NVIDIA)',
-    period: 'Sep 2025 – Dec 2026',
+    period: 'Sep 2025 – Dec 2025',
     color: '#00d4ff',
     description: 'Researched sparse and quantized compression techniques for DNNs and LLMs to improve inference efficiency.',
     tags: ['LLM Compression', 'Quantization', 'Sparsity', 'Neural Nets', 'Helion'],

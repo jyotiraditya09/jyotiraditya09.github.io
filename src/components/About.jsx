@@ -27,7 +27,7 @@ export default function About() {
             <p className="section-label">01. who_am_i</p>
             <h2 className="section-title">
               About{' '}
-              <span className="gradient-text">me</span>{' '}]
+              <span className="gradient-text">me</span>
             </h2>
           </div>
 
@@ -38,7 +38,7 @@ export default function About() {
                 <p>
                   I'm a final-year Computer Science, Statistics & Mathematics student at the{' '}
                   <span style={{ color: 'var(--text)', fontWeight: 600 }}>University of Toronto</span>
-                  {' '}, working at the intersection of quantitative finane, machine learning, and AI research.
+                  {' '}, working at the intersection of quantitative finance, machine learning, and AI research.
                 </p>
                 <p>
                   My journey spans{' '}
@@ -92,41 +92,6 @@ export default function About() {
                   </div>
                 </motion.div>
               ))}
-
-              {/* University card - full width */}
-              <motion.div
-                className="col-span-2 rounded-xl p-5"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(0,255,136,0.06) 0%, rgba(0,212,255,0.06) 100%)',
-                  border: '1px solid rgba(0,255,136,0.2)',
-                }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.4 }}
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <div className="font-mono text-xs mb-1" style={{ color: 'var(--green)' }}>
-                      🎓 University of Toronto
-                    </div>
-                    <div className="font-semibold text-sm" style={{ color: 'var(--text)' }}>
-                      CS × Statistics × Mathematics
-                    </div>
-                    <div className="font-mono text-xs mt-1" style={{ color: 'var(--muted)' }}>
-                      Sep 2021 – Apr 2026 · Toronto, ON
-                    </div>
-                  </div>
-                  <div
-                    className="text-right shrink-0 font-mono text-2xl font-bold"
-                    style={{ color: 'var(--green)' }}
-                  >
-                    3.90
-                    <div className="text-xs font-normal" style={{ color: 'var(--muted)' }}>
-                      GPA
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
             </div>
           </div>
         </motion.div>
