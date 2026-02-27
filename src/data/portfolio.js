@@ -33,6 +33,8 @@ export const education = {
     'JEE Physics 100 Percentile',
     'IChO National Qualifier',
     'IMO National Qualifier (Stage 1)',
+    'NTSE Scholar',
+    'KVPY Scholar',
     'IGCSE World Topper',
   ],
 }
