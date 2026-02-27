@@ -96,7 +96,7 @@ export default function Research() {
               <span className="gradient-text-purple">research</span>
             </h2>
             <p className="mt-3 text-sm max-w-xl" style={{ color: 'var(--muted)' }}>
-              Pushing the frontier of ML theory — from LLM compression to algorithmic fairness.
+              Pushing the frontier of ML theory - from LLM compression to algorithmic fairness.
             </p>
           </div>
         </motion.div>

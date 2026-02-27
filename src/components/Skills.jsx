@@ -84,7 +84,7 @@ export default function Skills() {
               <span className="gradient-text">stack</span>
             </h2>
             <p className="mt-3 text-sm max-w-xl" style={{ color: 'var(--muted)' }}>
-              From tick-level market data to LLM research — my full stack.
+              From coding libraries to quantitative and ML skills, my full stack.
             </p>
           </div>
         </motion.div>
