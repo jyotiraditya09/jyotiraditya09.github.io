@@ -77,7 +77,7 @@ export const experience = [
     tags: ['KDB/Q', 'Python', 'Market Microstructure', 'Order Book', 'Cython', 'SQL', 'Regression'],
   },
   {
-    role: 'Data Engineering Intern',
+    role: 'Software Engineering Intern',
     company: 'Bell Canada',
     shortCompany: 'Bell',
     period: 'May 2023 – Aug 2023',
