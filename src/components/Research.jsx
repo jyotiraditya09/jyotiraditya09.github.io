@@ -50,7 +50,7 @@ function ResearchCard({ item, index }) {
       </div>
 
       {/* Description */}
-      <p className="text-sm leading-relaxed flex-1" style={{ color: '#94a3b8' }}>
+      <p className="text-sm leading-relaxed flex-1" style={{ color: '#457B9D' }}>
         {item.description}
       </p>
 
@@ -145,7 +145,7 @@ function NeuralNetSVG() {
         <line
           key={i}
           x1={c.x1} y1={c.y1} x2={c.x2} y2={c.y2}
-          stroke="#00ff88"
+          stroke="#457B9D"
           strokeWidth="0.8"
           strokeOpacity="0.4"
         />
@@ -154,8 +154,8 @@ function NeuralNetSVG() {
       {layers.map((layer) =>
         layer.nodes.map((y, ni) => (
           <g key={`${layer.x}-${ni}`}>
-            <circle cx={layer.x} cy={y} r="8" fill="#030309" stroke="#00ff88" strokeWidth="1.5" />
-            <circle cx={layer.x} cy={y} r="3" fill="#00ff88" opacity="0.6" />
+            <circle cx={layer.x} cy={y} r="8" fill="#F1FAEE" stroke="#457B9D" strokeWidth="1.5" />
+            <circle cx={layer.x} cy={y} r="3" fill="#457B9D" opacity="0.6" />
           </g>
         ))
       )}

@@ -29,9 +29,9 @@ export default function Navbar({ activeSection }) {
     <nav
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        background: scrolled ? 'rgba(3,3,9,0.92)' : 'transparent',
+        background: scrolled ? 'rgba(241,250,238,0.92)' : 'transparent',
         backdropFilter: scrolled ? 'blur(16px)' : 'none',
-        borderBottom: scrolled ? '1px solid #1a1a2e' : '1px solid transparent',
+        borderBottom: scrolled ? '1px solid #A8DADC' : '1px solid transparent',
       }}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -69,13 +69,13 @@ export default function Navbar({ activeSection }) {
           style={{
             border: '1px solid var(--green)',
             color: 'var(--green)',
-            background: 'rgba(0,255,136,0.05)',
+            background: 'rgba(69,123,157,0.06)',
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = 'rgba(0,255,136,0.12)'
+            e.currentTarget.style.background = 'rgba(69,123,157,0.14)'
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = 'rgba(0,255,136,0.05)'
+            e.currentTarget.style.background = 'rgba(69,123,157,0.06)'
           }}
         >
           $ connect
@@ -108,7 +108,7 @@ export default function Navbar({ activeSection }) {
       {menuOpen && (
         <div
           className="md:hidden px-6 pb-6 flex flex-col gap-4"
-          style={{ background: 'rgba(3,3,9,0.97)', borderTop: '1px solid #1a1a2e' }}
+          style={{ background: 'rgba(241,250,238,0.97)', borderTop: '1px solid #A8DADC' }}
         >
           {NAV_LINKS.map((link) => (
             <button

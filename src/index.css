@@ -6,15 +6,15 @@
 
 /* ─── CSS Variables ─────────────────────────────────── */
 :root {
-  --green: #00ff88;
-  --cyan: #00d4ff;
-  --purple: #8b5cf6;
-  --bg: #030309;
-  --surface: #09090f;
-  --card: #0d0d18;
-  --border: #1a1a2e;
-  --text: #e2e8f0;
-  --muted: #64748b;
+  --green: #457B9D;
+  --cyan: #A8DADC;
+  --purple: #1D3557;
+  --bg: #F1FAEE;
+  --surface: #E4F3F4;
+  --card: #FFFFFF;
+  --border: #A8DADC;
+  --text: #1D3557;
+  --muted: #457B9D;
 }
 
 /* ─── Global Reset ───────────────────────────────────── */
@@ -33,11 +33,11 @@ body {
 /* ─── Scrollbar ─────────────────────────────────────── */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--green); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--cyan); }
+::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--green); }
 
 /* ─── Selection ─────────────────────────────────────── */
-::selection { background: rgba(0, 255, 136, 0.2); color: var(--green); }
+::selection { background: rgba(69, 123, 157, 0.2); color: var(--purple); }
 
 /* ─── Keyframe Animations ───────────────────────────── */
 @keyframes glitch {
@@ -67,8 +67,8 @@ body {
 }
 
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 15px rgba(0, 255, 136, 0.15), 0 0 30px rgba(0, 255, 136, 0.05); }
-  50% { box-shadow: 0 0 25px rgba(0, 255, 136, 0.35), 0 0 50px rgba(0, 255, 136, 0.15); }
+  0%, 100% { box-shadow: 0 0 15px rgba(69, 123, 157, 0.2), 0 0 30px rgba(69, 123, 157, 0.08); }
+  50% { box-shadow: 0 0 25px rgba(69, 123, 157, 0.4), 0 0 50px rgba(69, 123, 157, 0.18); }
 }
 
 @keyframes borderFlow {
@@ -106,22 +106,22 @@ body {
 .font-mono { font-family: 'Fira Code', Consolas, monospace; }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--green) 0%, var(--cyan) 100%);
+  background: linear-gradient(135deg, var(--green) 0%, var(--purple) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-purple {
-  background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%);
+  background: linear-gradient(135deg, var(--green) 0%, var(--purple) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.glow-green { box-shadow: 0 0 20px rgba(0, 255, 136, 0.25); }
-.glow-cyan  { box-shadow: 0 0 20px rgba(0, 212, 255, 0.25); }
-.glow-purple { box-shadow: 0 0 20px rgba(139, 92, 246, 0.25); }
+.glow-green { box-shadow: 0 0 20px rgba(69, 123, 157, 0.3); }
+.glow-cyan  { box-shadow: 0 0 20px rgba(168, 218, 220, 0.35); }
+.glow-purple { box-shadow: 0 0 20px rgba(29, 53, 87, 0.25); }
 
 .animate-pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
 .animate-float { animation: float 4s ease-in-out infinite; }
@@ -133,14 +133,14 @@ body {
   inset: 0;
   color: var(--cyan);
   animation: glitch 5s infinite;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 .glitch-layer2 {
   position: absolute;
   inset: 0;
-  color: var(--purple);
+  color: var(--green);
   animation: glitch2 5s infinite;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 /* ─── Card Styles ───────────────────────────────────── */
@@ -152,27 +152,27 @@ body {
 }
 
 .card:hover {
-  border-color: rgba(0, 255, 136, 0.3);
+  border-color: rgba(69, 123, 157, 0.5);
   transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 255, 136, 0.06);
+  box-shadow: 0 12px 40px rgba(29, 53, 87, 0.12), 0 0 20px rgba(69, 123, 157, 0.08);
 }
 
 /* ─── Terminal Window ─────────────────────────────────── */
 .terminal-window {
-  background: #050510;
-  border: 1px solid #1e1e3a;
+  background: #1D3557;
+  border: 1px solid #457B9D;
   border-radius: 10px;
   overflow: hidden;
   font-family: 'Fira Code', monospace;
 }
 
 .terminal-header {
-  background: #0d0d1a;
+  background: #162a44;
   padding: 10px 16px;
   display: flex;
   align-items: center;
   gap: 8px;
-  border-bottom: 1px solid #1e1e3a;
+  border-bottom: 1px solid rgba(69,123,157,0.5);
 }
 
 .terminal-dot {
@@ -237,7 +237,7 @@ body {
   position: absolute;
   inset: -1px;
   border-radius: 13px;
-  background: linear-gradient(135deg, var(--green), var(--cyan), var(--purple));
+  background: linear-gradient(135deg, var(--cyan), var(--green), var(--purple));
   background-size: 200% 200%;
   animation: borderFlow 4s ease infinite;
   z-index: -1;
@@ -276,7 +276,7 @@ body {
   bottom: 0;
   width: 1px;
   background: linear-gradient(to bottom, var(--green), var(--cyan), var(--purple));
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .timeline-dot {

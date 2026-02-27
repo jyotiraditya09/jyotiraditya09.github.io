@@ -29,14 +29,14 @@ export default function MatrixBackground() {
       }
       lastRender = timestamp
 
-      ctx.fillStyle = 'rgba(3, 3, 9, 0.06)'
+      ctx.fillStyle = 'rgba(241, 250, 238, 0.06)'
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
       drops.forEach((y, i) => {
         const char = CHARS[Math.floor(Math.random() * CHARS.length)]
         const brightness = Math.random() > 0.95 ? 0.9 : 0.18
 
-        ctx.fillStyle = `rgba(0, 255, 136, ${brightness})`
+        ctx.fillStyle = `rgba(69, 123, 157, ${brightness})`
         ctx.font = `${fontSize}px "Fira Code", monospace`
         ctx.fillText(char, i * fontSize, y * fontSize)
 

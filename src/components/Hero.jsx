@@ -62,8 +62,8 @@ export default function Hero() {
             <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 font-mono text-xs"
               style={{
-                background: 'rgba(0,255,136,0.08)',
-                border: '1px solid rgba(0,255,136,0.25)',
+                background: 'rgba(69,123,157,0.08)',
+                border: '1px solid rgba(69,123,157,0.3)',
                 color: 'var(--green)',
               }}
             >
@@ -121,8 +121,8 @@ export default function Hero() {
                   key={stat.label}
                   className="flex flex-col items-center px-4 py-3 rounded-lg"
                   style={{
-                    background: 'rgba(13,13,24,0.8)',
-                    border: `1px solid ${stat.color}30`,
+                    background: 'rgba(255,255,255,0.7)',
+                    border: `1px solid ${stat.color}40`,
                     minWidth: '90px',
                   }}
                 >
@@ -151,9 +151,9 @@ export default function Hero() {
                 className="flex items-center gap-2 px-6 py-3 rounded-lg font-mono text-sm font-medium transition-all duration-200"
                 style={{
                   background: 'var(--green)',
-                  color: '#030309',
+                  color: '#F1FAEE',
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.boxShadow = '0 0 24px rgba(0,255,136,0.4)')}
+                onMouseEnter={(e) => (e.currentTarget.style.boxShadow = '0 0 24px rgba(69,123,157,0.4)')}
                 onMouseLeave={(e) => (e.currentTarget.style.boxShadow = 'none')}
               >
                 <GithubIcon />
@@ -165,12 +165,12 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-6 py-3 rounded-lg font-mono text-sm font-medium transition-all duration-200"
                 style={{
-                  border: '1px solid rgba(0,212,255,0.4)',
-                  color: 'var(--cyan)',
-                  background: 'rgba(0,212,255,0.04)',
+                  border: '1px solid rgba(168,218,220,0.6)',
+                  color: 'var(--green)',
+                  background: 'rgba(168,218,220,0.12)',
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(0,212,255,0.1)')}
-                onMouseLeave={(e) => (e.currentTarget.style.background = 'rgba(0,212,255,0.04)')}
+                onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(168,218,220,0.25)')}
+                onMouseLeave={(e) => (e.currentTarget.style.background = 'rgba(168,218,220,0.12)')}
               >
                 <LinkedinIcon />
                 ./connect
