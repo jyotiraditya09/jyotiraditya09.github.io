@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { personal } from '../data/portfolio'
 
 function useTypewriter(texts, speed = 90) {
@@ -35,57 +35,9 @@ function useTypewriter(texts, speed = 90) {
   return displayText
 }
 
-function useCounter(target, duration = 2000, start = false) {
-  const [count, setCount] = useState(0)
-  useEffect(() => {
-    if (!start) return
-    const startTime = performance.now()
-    const raf = (now) => {
-      const elapsed = now - startTime
-      const progress = Math.min(elapsed / duration, 1)
-      const eased = 1 - Math.pow(1 - progress, 3)
-      setCount(Math.floor(eased * target))
-      if (progress < 1) requestAnimationFrame(raf)
-      else setCount(target)
-    }
-    requestAnimationFrame(raf)
-  }, [target, duration, start])
-  return count
-}
-
-const TERMINAL_LINES = [
-  { prompt: '$', cmd: 'whoami', delay: 300 },
-  { output: 'jyotiraditya_gupta', type: 'result', delay: 600 },
-  { prompt: '$', cmd: 'cat profile.json', delay: 1000 },
-  { output: '{ gpa: 3.90, codesignal: 600/600, iit_jee_rank: 889 }', type: 'result', delay: 1400 },
-  { prompt: '$', cmd: 'ls expertise/', delay: 2000 },
-  { output: 'quant-research/  ml-engineering/  software-dev/', type: 'result', delay: 2400 },
-  { prompt: '$', cmd: 'echo $STATUS', delay: 3000 },
-  { output: '✓ Available for new opportunities', type: 'success', delay: 3400 },
-]
 
 export default function Hero() {
   const role = useTypewriter(personal.roles, 80)
-  const [terminalLines, setTerminalLines] = useState([])
-  const [started, setStarted] = useState(false)
-  const terminalRef = useRef(null)
-
-  useEffect(() => {
-    const timer = setTimeout(() => setStarted(true), 800)
-    return () => clearTimeout(timer)
-  }, [])
-
-  useEffect(() => {
-    if (!started) return
-    TERMINAL_LINES.forEach(({ delay, ...line }) => {
-      setTimeout(() => {
-        setTerminalLines((prev) => [...prev, line])
-        if (terminalRef.current) {
-          terminalRef.current.scrollTop = terminalRef.current.scrollHeight
-        }
-      }, delay)
-    })
-  }, [started])
 
   return (
     <section
@@ -103,7 +55,7 @@ export default function Hero() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+        <div className="flex items-center min-h-[80vh]">
           {/* Left column */}
           <div style={{ animation: 'fadeInUp 0.8s ease 0.2s both' }}>
             {/* Status badge */}
@@ -226,89 +178,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right column — Terminal */}
-          <div style={{ animation: 'fadeInUp 0.8s ease 0.5s both' }}>
-            <div className="terminal-window animate-float" style={{ maxWidth: '480px', margin: '0 auto' }}>
-              {/* Terminal header */}
-              <div className="terminal-header">
-                <div className="terminal-dot" style={{ background: '#ff5f57' }} />
-                <div className="terminal-dot" style={{ background: '#febc2e' }} />
-                <div className="terminal-dot" style={{ background: '#28c840' }} />
-                <span
-                  className="ml-3 font-mono text-xs"
-                  style={{ color: 'var(--muted)' }}
-                >
-                  bash — jyotiraditya@uoft
-                </span>
-              </div>
-
-              {/* Terminal body */}
-              <div
-                ref={terminalRef}
-                className="terminal-body"
-                style={{ minHeight: '260px', maxHeight: '340px', overflowY: 'auto' }}
-              >
-                {terminalLines.map((line, i) => (
-                  <div key={i} className="leading-7">
-                    {line.prompt && (
-                      <span style={{ color: 'var(--green)' }}>
-                        {'$ '}
-                        <span style={{ color: 'var(--text)' }}>{line.cmd}</span>
-                      </span>
-                    )}
-                    {line.output && (
-                      <div
-                        style={{
-                          color:
-                            line.type === 'success'
-                              ? 'var(--green)'
-                              : line.type === 'result'
-                              ? 'var(--cyan)'
-                              : 'var(--muted)',
-                          paddingLeft: '2px',
-                        }}
-                      >
-                        {line.output}
-                      </div>
-                    )}
-                  </div>
-                ))}
-                {terminalLines.length > 0 && (
-                  <div style={{ color: 'var(--green)' }}>
-                    {'$ '}
-                    <span className="animate-blink" style={{ color: 'var(--green)' }}>
-                      ▋
-                    </span>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* Decorative code snippet */}
-            <div
-              className="mt-4 p-4 rounded-lg font-mono text-xs"
-              style={{
-                background: 'rgba(13,13,24,0.6)',
-                border: '1px solid #1a1a2e',
-                color: 'var(--muted)',
-                maxWidth: '480px',
-                margin: '16px auto 0',
-              }}
-            >
-              <span style={{ color: '#7b89a8' }}>{'// '}</span>
-              <span style={{ color: 'var(--purple)' }}>import</span>
-              {' { '}
-              <span style={{ color: 'var(--cyan)' }}>brain</span>
-              {', '}
-              <span style={{ color: 'var(--green)' }}>markets</span>
-              {', '}
-              <span style={{ color: 'var(--purple)' }}>code</span>
-              {' } '}
-              <span style={{ color: '#7b89a8' }}>from</span>
-              {' '}
-              <span style={{ color: '#f59e0b' }}>"jyotiraditya"</span>
-            </div>
-          </div>
         </div>
 
         {/* Scroll indicator */}

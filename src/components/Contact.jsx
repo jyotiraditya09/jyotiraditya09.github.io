@@ -57,13 +57,13 @@ export default function Contact() {
               <span className="gradient-text">connect</span>
             </h2>
             <p className="mt-4 text-base max-w-xl" style={{ color: 'var(--muted)' }}>
-              Whether it's quant research, ML engineering, or a great problem to solve —
+              Whether it's a research idea in the financial markets, new developments in the ML world, or a great problem to solve,
               I'm always open to interesting conversations.
             </p>
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl">
+        <div className="max-w-lg">
           {/* Terminal contact block */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -108,56 +108,6 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-          </motion.div>
-
-          {/* Link cards */}
-          <motion.div
-            className="flex flex-col gap-4"
-            initial={{ opacity: 0, x: 30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            {LINKS.map((link, i) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-5 rounded-xl transition-all duration-200"
-                style={{
-                  background: 'rgba(13,13,24,0.8)',
-                  border: `1px solid ${link.color}25`,
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = `${link.color}08`
-                  e.currentTarget.style.borderColor = `${link.color}50`
-                  e.currentTarget.style.transform = 'translateX(6px)'
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(13,13,24,0.8)'
-                  e.currentTarget.style.borderColor = `${link.color}25`
-                  e.currentTarget.style.transform = 'translateX(0)'
-                }}
-              >
-                <div
-                  className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
-                  style={{ background: `${link.color}12`, color: link.color }}
-                >
-                  {link.icon}
-                </div>
-                <div>
-                  <div className="font-semibold text-sm" style={{ color: 'var(--text)' }}>
-                    {link.label}
-                  </div>
-                  <div className="font-mono text-xs mt-0.5" style={{ color: link.color }}>
-                    {link.value}
-                  </div>
-                </div>
-                <div className="ml-auto" style={{ color: 'var(--muted)' }}>
-                  ↗
-                </div>
-              </a>
-            ))}
           </motion.div>
         </div>
       </div>

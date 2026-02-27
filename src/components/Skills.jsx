@@ -113,20 +113,20 @@ export default function Skills() {
             {[
               {
                 name: 'Python',
-                score: '600 / 600',
-                note: 'CodeSignal Proctored — Top 1%',
+                score: '5 yrs exp.',
+                note: 'Bell, RBCCM',
                 color: 'var(--green)',
                 pct: 100,
               },
               {
                 name: 'Quantitative Finance',
-                score: '3 yrs exp.',
-                note: 'RBC CRB + CC&L',
+                score: '2 yrs exp.',
+                note: 'RBCCM + CC&L',
                 color: 'var(--cyan)',
                 pct: 88,
               },
               {
-                name: 'ML Research',
+                name: 'AI/ML Research',
                 score: '3 labs',
                 note: 'UofT CS + Stats',
                 color: 'var(--purple)',

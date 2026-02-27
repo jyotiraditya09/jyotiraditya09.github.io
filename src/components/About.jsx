@@ -3,10 +3,10 @@ import { motion, useInView } from 'framer-motion'
 import { personal, education } from '../data/portfolio'
 
 const HIGHLIGHTS = [
-  { icon: '📐', label: 'Mathematics Olympiad', sub: 'IMO & IChO National Qualifier' },
-  { icon: '📊', label: 'Quantitative Finance', sub: 'Markets × Statistics × ML' },
-  { icon: '🧬', label: 'ML Research', sub: 'LLMs, Attention, Fairness' },
-  { icon: '💻', label: 'Full-Stack Engineering', sub: 'Python 600/600 CodeSignal' },
+  { icon: '📐', label: 'Competitive Exams', sub: 'IMO & IChO National Qualifier' },
+  { icon: '📊', label: 'Quant', sub: 'Markets × Statistics × ML' },
+  { icon: '🧬', label: 'ML Research', sub: 'LLMs, Attention, AI Fairness' },
+  { icon: '💻', label: 'Software Engineering', sub: 'Python, Java, R, SQL' },
 ]
 
 export default function About() {
@@ -24,11 +24,10 @@ export default function About() {
         >
           {/* Section header */}
           <div className="mb-14">
-            <p className="section-label">01. about_me</p>
+            <p className="section-label">01. who_am_i</p>
             <h2 className="section-title">
-              The{' '}
-              <span className="gradient-text">human</span>{' '}
-              behind the math
+              About{' '}
+              <span className="gradient-text">me</span>{' '}]
             </h2>
           </div>
 
@@ -39,17 +38,17 @@ export default function About() {
                 <p>
                   I'm a final-year Computer Science, Statistics & Mathematics student at the{' '}
                   <span style={{ color: 'var(--text)', fontWeight: 600 }}>University of Toronto</span>
-                  {' '}(GPA: 3.90), working at the intersection of quantitative finance, machine learning, and algorithmic research.
+                  {' '}, working at the intersection of quantitative finane, machine learning, and AI research.
                 </p>
                 <p>
                   My journey spans{' '}
                   <span style={{ color: 'var(--green)' }}>quant trading</span> at RBC Capital Markets,{' '}
                   <span style={{ color: 'var(--cyan)' }}>quant research</span> at CC&L Investment Management, and{' '}
-                  <span style={{ color: 'var(--purple)' }}>ML research</span> at UofT — from building alpha signals on tick-level data to researching LLM compression and algorithmic fairness.
+                  <span style={{ color: 'var(--purple)' }}>ML research</span> at UofT, from building alpha signals on tick-level data to researching LLM compression and proportionally fair clusturing algorithms.
                 </p>
                 <p>
-                  I love elegant mathematics, efficient algorithms, and the thrill of turning noisy market signals into edge.
-                  Outside of work, I'm a competitive math olympiad enthusiast — IIT-JEE AIR 889, IMO & IChO qualifier.
+                  I love elegant mathematics, puzzles, and the thrill of turning noisy signals and mispricing in financial markets into competitive edge.
+                  Outside of work, I'm a sports enthusiast, I love cricket, soccer and tennis.
                 </p>
               </div>
 

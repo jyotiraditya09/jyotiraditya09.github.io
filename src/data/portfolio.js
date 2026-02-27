@@ -27,7 +27,7 @@ export const education = {
     'UofT International Scholarship ($100,000)',
     "Dean's List Scholar (3×)",
     'New College Scholarship (3×)',
-    'George Luste Prize in Physics',
+    'George Luste Prize in Physics ($1,500)',
   ],
   olympiads: [
     'JEE Physics 100 Percentile',
@@ -55,19 +55,20 @@ export const experience = [
   },
   {
     role: 'Quantitative Trading Analyst',
-    company: 'Royal Bank of Canada — Capital Markets (CRB)',
+    company: 'Royal Bank of Canada, Capital Markets',
     shortCompany: 'RBC',
     period: 'May 2024 – Apr 2025',
     location: 'Toronto, ON',
     color: '#00d4ff',
     bullets: [
+      'Electronic Market Making and Central Risk Book',
       'Designed two alpha prediction signals using proprietary tick-level datasets, incorporating feature engineering, labeling strategies, and rigorous backtesting.',
       'Developed scalable data pipelines in KDB/Q and Python for real-time market microstructure analysis.',
       'Built execution signals leveraging order book imbalance, time-series signals, and statistical learning.',
     ],
     metrics: [
       { label: 'Sharpe Ratio ↑', value: '+87.5%', color: '#00d4ff' },
-      { label: 'PnL ↑', value: '+22%', color: '#00ff88' },
+      { label: 'Strategy PnL ↑', value: '+22%', color: '#00ff88' },
       { label: 'Fill Quality ↑', value: '+30%', color: '#8b5cf6' },
       { label: 'Overnight Risk ↓', value: '-6.7%', color: '#ff6b6b' },
     ],
@@ -137,12 +138,12 @@ export const skills = {
     icon: '</>',
     items: ['Python', 'R', 'SQL', 'KDB/Q', 'Java', 'C', 'Linux/Bash'],
   },
-  'Quantitative Finance': {
+  'Quant': {
     color: '#8b5cf6',
     icon: '∂',
     items: ['Market Microstructure', 'Options Pricing', 'Risk & Hedging', 'Backtesting', 'Alpha Research', 'Portfolio Management', 'Order Book Analysis'],
   },
-  'Tools & Libraries': {
+  'Tools': {
     color: '#f59e0b',
     icon: '⚙',
     items: ['PyTorch', 'TensorFlow', 'Keras', 'Pandas', 'NumPy', 'FastAPI', 'Docker', 'Git', 'Logstash', 'Tableau', 'Bloomberg'],
