@@ -81,7 +81,7 @@ export default function Skills() {
             <p className="section-label">04. technical_skills</p>
             <h2 className="section-title">
               Tech{' '}
-              <span className="gradient-text">arsenal</span>
+              <span className="gradient-text">stack</span>
             </h2>
             <p className="mt-3 text-sm max-w-xl" style={{ color: 'var(--muted)' }}>
               From tick-level market data to LLM research — my full stack.

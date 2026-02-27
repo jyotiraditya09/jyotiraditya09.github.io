@@ -165,7 +165,7 @@ export default function Education() {
                   AIR 889
                 </div>
                 <div className="font-mono text-xs mt-1" style={{ color: 'var(--muted)' }}>
-                  Top 0.03% · ~1.2M candidates
+                  Top 0.07% · ~1.2M candidates
                 </div>
               </div>
             </div>
