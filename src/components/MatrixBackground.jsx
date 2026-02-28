@@ -68,7 +68,7 @@ export default function MatrixBackground() {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 z-0 pointer-events-none"
-      style={{ opacity: 0.13 }}
+      style={{ opacity: 0.28 }}
     />
   )
 }
