@@ -35,7 +35,7 @@ function SkillCategory({ name, data, index }) {
       {/* Skills as terminal output */}
       <div
         className="rounded-lg p-4 font-mono text-xs space-y-1.5"
-        style={{ background: 'rgba(29,53,87,0.06)', border: '1px solid rgba(168,218,220,0.5)' }}
+        style={{ background: 'rgba(5,5,16,0.8)', border: '1px solid #1a1a2e' }}
       >
         <div className="mb-2" style={{ color: 'var(--muted)' }}>
           <span style={{ color: data.color }}>{'>'}</span>
@@ -51,7 +51,7 @@ function SkillCategory({ name, data, index }) {
           >
             <span style={{ color: `${data.color}80` }}>│</span>
             <span style={{ color: data.color }}>·</span>
-            <span style={{ color: '#1D3557' }}>{skill}</span>
+            <span style={{ color: '#cbd5e1' }}>{skill}</span>
           </motion.div>
         ))}
       </div>
@@ -67,7 +67,7 @@ export default function Skills() {
     <section id="skills" className="relative py-28 z-10">
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: 'rgba(168,218,220,0.02)' }}
+        style={{ background: 'rgba(0,212,255,0.01)' }}
       />
 
       <div className="max-w-6xl mx-auto px-6">
@@ -102,8 +102,8 @@ export default function Skills() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="mt-10 p-6 rounded-xl"
           style={{
-            background: 'rgba(255,255,255,0.7)',
-            border: '1px solid #A8DADC',
+            background: 'rgba(13,13,24,0.8)',
+            border: '1px solid #1a1a2e',
           }}
         >
           <div className="font-mono text-xs mb-4" style={{ color: 'var(--muted)' }}>

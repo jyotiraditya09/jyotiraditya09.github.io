@@ -35,8 +35,8 @@ export default function Education() {
             <div
               className="rounded-2xl p-8 h-full"
               style={{
-                background: 'linear-gradient(135deg, rgba(69,123,157,0.06) 0%, rgba(168,218,220,0.04) 50%, rgba(29,53,87,0.06) 100%)',
-                border: '1px solid rgba(69,123,157,0.25)',
+                background: 'linear-gradient(135deg, rgba(0,255,136,0.05) 0%, rgba(0,212,255,0.03) 50%, rgba(139,92,246,0.05) 100%)',
+                border: '1px solid rgba(0,255,136,0.2)',
               }}
             >
               {/* Header */}
@@ -45,7 +45,7 @@ export default function Education() {
                   <h3 className="text-xl font-bold mb-1" style={{ color: 'var(--text)' }}>
                     {education.school}
                   </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: '#457B9D' }}>
+                  <p className="text-sm leading-relaxed" style={{ color: '#94a3b8' }}>
                     {education.degree}
                   </p>
                   <p className="font-mono text-xs mt-2" style={{ color: 'var(--muted)' }}>
@@ -55,8 +55,8 @@ export default function Education() {
                 <div
                   className="shrink-0 text-center px-4 py-3 rounded-xl font-mono"
                   style={{
-                    background: 'rgba(69,123,157,0.1)',
-                    border: '1px solid rgba(69,123,157,0.3)',
+                    background: 'rgba(0,255,136,0.1)',
+                    border: '1px solid rgba(0,255,136,0.3)',
                   }}
                 >
                   <div className="text-2xl font-bold" style={{ color: 'var(--green)' }}>
@@ -78,8 +78,8 @@ export default function Education() {
                       className="tag text-xs"
                       style={{
                         color: 'var(--cyan)',
-                        borderColor: 'rgba(168,218,220,0.5)',
-                        background: 'rgba(168,218,220,0.12)',
+                        borderColor: 'rgba(0,212,255,0.25)',
+                        background: 'rgba(0,212,255,0.08)',
                       }}
                     >
                       {course}
@@ -98,7 +98,7 @@ export default function Education() {
                     <li
                       key={ach}
                       className="flex items-start gap-2 text-sm"
-                      style={{ color: '#457B9D' }}
+                      style={{ color: '#94a3b8' }}
                     >
                       <span className="mt-1 shrink-0" style={{ color: 'var(--green)' }}>◆</span>
                       {ach}
@@ -119,8 +119,8 @@ export default function Education() {
             <div
               className="rounded-2xl p-6 h-full"
               style={{
-                background: '#1D3557',
-                border: '1px solid #457B9D',
+                background: 'rgba(13,13,24,0.9)',
+                border: '1px solid #1a1a2e',
               }}
             >
               <div className="font-mono text-xs mb-4" style={{ color: 'var(--muted)' }}>
@@ -129,7 +129,7 @@ export default function Education() {
 
               <div className="space-y-4">
                 {education.olympiads.map((item, i) => {
-                  const colors = ['var(--cyan)', 'var(--cyan)', 'var(--cyan)', 'var(--cyan)', 'var(--cyan)', 'var(--cyan)']
+                  const colors = ['var(--green)', 'var(--cyan)', 'var(--purple)', 'var(--green)', 'var(--cyan)']
                   return (
                     <motion.div
                       key={item}
@@ -145,7 +145,7 @@ export default function Education() {
                       >
                         {String(i + 1).padStart(2, '0')}
                       </span>
-                      <span className="text-sm" style={{ color: '#F1FAEE' }}>
+                      <span className="text-sm" style={{ color: '#cbd5e1' }}>
                         {item}
                       </span>
                     </motion.div>
@@ -156,7 +156,7 @@ export default function Education() {
               {/* Key stat highlight */}
               <div
                 className="mt-6 p-4 rounded-lg text-center"
-                style={{ background: 'rgba(168,218,220,0.12)', border: '1px solid rgba(168,218,220,0.3)' }}
+                style={{ background: 'rgba(0,255,136,0.06)', border: '1px solid rgba(0,255,136,0.15)' }}
               >
                 <div className="font-mono text-xs mb-1" style={{ color: 'var(--muted)' }}>
                   IIT-JEE All India Rank

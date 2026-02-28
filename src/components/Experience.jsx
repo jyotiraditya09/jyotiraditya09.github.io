@@ -71,7 +71,7 @@ function ExperienceCard({ job, index }) {
         {/* Bullets */}
         <ul className="space-y-2 mb-5">
           {job.bullets.map((b, i) => (
-            <li key={i} className="flex gap-3 text-sm leading-relaxed" style={{ color: '#457B9D' }}>
+            <li key={i} className="flex gap-3 text-sm leading-relaxed" style={{ color: '#94a3b8' }}>
               <span className="mt-1 shrink-0 font-mono" style={{ color: job.color }}>▸</span>
               {b}
             </li>
@@ -115,7 +115,7 @@ export default function Experience() {
       {/* Subtle section bg */}
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: 'rgba(69,123,157,0.02)' }}
+        style={{ background: 'rgba(0,255,136,0.01)' }}
       />
 
       <div className="max-w-6xl mx-auto px-6">

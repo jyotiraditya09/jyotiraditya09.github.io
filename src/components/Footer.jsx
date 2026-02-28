@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer
       className="relative z-10 border-t py-10"
-      style={{ borderColor: '#A8DADC', background: 'rgba(241,250,238,0.95)' }}
+      style={{ borderColor: '#1a1a2e', background: 'rgba(9,9,15,0.9)' }}
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -50,7 +50,7 @@ export default function Footer() {
         {/* Bottom line */}
         <div
           className="mt-6 pt-4 text-center font-mono text-xs"
-          style={{ color: 'var(--muted)', borderTop: '1px solid #A8DADC', opacity: 0.7 }}
+          style={{ color: 'var(--muted)', borderTop: '1px solid #1a1a2e', opacity: 0.5 }}
         >
           {`// Built with React + Vite + Tailwind CSS`}
         </div>
