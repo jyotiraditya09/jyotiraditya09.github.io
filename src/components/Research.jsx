@@ -81,7 +81,7 @@ export default function Research() {
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="research" className="relative py-28 z-10">
+    <section id="research" className="relative py-16 z-10">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           ref={ref}

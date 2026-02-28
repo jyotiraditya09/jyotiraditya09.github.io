@@ -111,7 +111,7 @@ export default function Experience() {
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="experience" className="relative py-28 z-10">
+    <section id="experience" className="relative py-16 z-10">
       {/* Subtle section bg */}
       <div
         className="absolute inset-0 pointer-events-none"
