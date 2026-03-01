@@ -63,7 +63,7 @@ export default function Contact() {
           </div>
         </motion.div>
 
-        <div className="max-w-lg">
+        <div className="max-w-lg mx-auto">
           {/* Terminal contact block */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

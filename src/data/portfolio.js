@@ -5,11 +5,10 @@ export const personal = {
   github: 'https://github.com/jyotiraditya09',
   roles: [
     'Quantitative Researcher',
-    'ML Engineer',
     'Data Scientist',
-    'Software Developer',
+    'ML Engineer',
   ],
-  tagline: 'Building at the intersection of machine learning and financial markets.',
+  tagline: 'Working at the intersection of machine learning and financial markets.',
   stats: [
     { label: 'Prof. Nisarg Shah', value: 'AI Research Assistant', suffix: '', color: '#8b5cf6' },
     { label: 'Statistics and Mathematics', value: 'Teaching Assistant', suffix: '', color: '#00ff88' },

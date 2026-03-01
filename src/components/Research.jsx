@@ -50,7 +50,7 @@ function ResearchCard({ item, index }) {
       </div>
 
       {/* Description */}
-      <p className="text-sm leading-relaxed flex-1" style={{ color: '#94a3b8' }}>
+      <p className="text-base leading-relaxed flex-1" style={{ color: '#94a3b8' }}>
         {item.description}
       </p>
 

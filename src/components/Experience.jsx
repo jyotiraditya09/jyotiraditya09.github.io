@@ -71,7 +71,7 @@ function ExperienceCard({ job, index }) {
         {/* Bullets */}
         <ul className="space-y-2 mb-5">
           {job.bullets.map((b, i) => (
-            <li key={i} className="flex gap-3 text-sm leading-relaxed" style={{ color: '#94a3b8' }}>
+            <li key={i} className="flex gap-3 text-base leading-relaxed" style={{ color: '#94a3b8' }}>
               <span className="mt-1 shrink-0 font-mono" style={{ color: job.color }}>▸</span>
               {b}
             </li>

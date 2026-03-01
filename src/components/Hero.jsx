@@ -55,9 +55,9 @@ export default function Hero() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
-        <div className="flex items-center min-h-[80vh]">
-          {/* Left column */}
-          <div style={{ animation: 'fadeInUp 0.8s ease 0.2s both' }}>
+        <div className="flex items-center justify-center min-h-[80vh]">
+          {/* Center column */}
+          <div className="text-center" style={{ animation: 'fadeInUp 0.8s ease 0.2s both' }}>
             {/* Status badge */}
             <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 font-mono text-xs"
@@ -108,14 +108,14 @@ export default function Hero() {
 
             {/* Tagline */}
             <p
-              className="text-base mb-8 max-w-md leading-relaxed"
+              className="text-base mb-8 max-w-md leading-relaxed mx-auto"
               style={{ color: 'var(--muted)' }}
             >
               {personal.tagline}
             </p>
 
             {/* Stats row */}
-            <div className="flex flex-wrap gap-4 mb-10">
+            <div className="flex flex-wrap justify-center gap-4 mb-10">
               {personal.stats.map((stat) => (
                 <div
                   key={stat.label}
@@ -143,7 +143,7 @@ export default function Hero() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               <a
                 href={personal.github}
                 target="_blank"
