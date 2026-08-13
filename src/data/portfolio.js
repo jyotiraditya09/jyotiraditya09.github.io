@@ -5,13 +5,13 @@ export const personal = {
   github: 'https://github.com/jyotiraditya09',
   roles: [
     'AI Engineer',
-    'Applied ML Engineer',
-    'LLM Systems',
+    'ML Engineer',
+    'Software Engineer',
   ],
-  tagline: 'Building production AI systems — document pipelines, retrieval, and LLM applications.',
+  tagline: 'I build and ship production AI systems.',
   stats: [
-    { label: 'YuJa', value: 'Applied ML Engineer', suffix: '', color: '#8b5cf6' },
-    { label: 'Production APIs', value: 'FastAPI · 500K+/day', suffix: '', color: '#00ff88' },
+    { label: 'YuJa', value: 'AI Engineer', suffix: '', color: '#8b5cf6' },
+    { label: 'Statistics and Mathematics', value: 'Teaching Assistant', suffix: '', color: '#00ff88' },
   ],
 }
 
@@ -40,7 +40,7 @@ export const education = {
 
 export const experience = [
   {
-    role: 'Applied Machine Learning Engineer',
+    role: 'AI Engineer',
     company: 'YuJa',
     shortCompany: 'YuJa',
     period: 'May 2026 – Present',
@@ -49,13 +49,13 @@ export const experience = [
     bullets: [
       'Designed AI-driven remediation workflows covering 20+ accessibility issues across PDF, DOCX, XLSX, and HTML documents.',
       'Engineered OCR pipelines to improve PDF-to-DOCX layout preservation and text extraction accuracy on messy, unstructured files.',
-      'Turned multi-format documents into structured, retrieval-ready assets with consistent layout, text, and metadata for downstream AI workflows.',
+      'Grounded those workflows in the source document: the assistant retrieves the relevant passage from the extracted text instead of answering from the model alone.',
     ],
     metrics: [
       { label: 'Issue types', value: '20+', color: '#8b5cf6' },
       { label: 'Formats', value: '4', color: '#00d4ff' },
     ],
-    tags: ['Python', 'OCR', 'Document Processing', 'PDFs', 'Accessibility', 'Workflow Automation'],
+    tags: ['Python', 'OCR', 'LLMs', 'Accessibility', 'Workflow Automation'],
   },
   {
     role: 'Quantitative Research Intern',
@@ -115,7 +115,7 @@ export const experience = [
 
 export const research = [
   {
-    title: 'Applied ML — Fair Clustering & Summarization',
+    title: 'Fair Clustering & Summarization',
     institution: 'Department of Computer Science, UofT',
     advisor: 'Prof. Nisarg Shah',
     period: 'Jan 2026 – June 2026',
@@ -125,13 +125,13 @@ export const research = [
     icon: '⚖️',
   },
   {
-    title: 'LLM Systems — Compression & RAG',
+    title: 'LLM Compression',
     institution: 'Department of Computer Science, UofT',
     advisor: 'Prof. Maryam Dehnavi (Principal at NVIDIA)',
     period: 'Sep 2025 – Dec 2026',
     color: '#00d4ff',
-    description: 'Implemented pruning and quantization pipelines in PyTorch, benchmarking accuracy–efficiency trade-offs for DNN and LLM inference. Built RAG pipelines on top of those compressed models — chunking, metadata, indexing, and retrieval — so grounded generation stayed within memory and latency budgets.',
-    tags: ['RAG', 'Chunking', 'Retrieval', 'PyTorch', 'Quantization', 'Sparsity'],
+    description: 'Implemented pruning and quantization pipelines in PyTorch, benchmarking accuracy–efficiency trade-offs for DNN and LLM inference. Ran those smaller models in a retrieval-augmented setup so answers could stay grounded in source text without blowing memory or latency.',
+    tags: ['PyTorch', 'Quantization', 'Sparsity', 'LLMs'],
     icon: '🧠',
   },
   {
@@ -147,10 +147,10 @@ export const research = [
 ]
 
 export const skills = {
-  'LLM & Retrieval': {
+  'ML & AI': {
     color: '#00ff88',
     icon: '◈',
-    items: ['RAG Pipelines', 'Document Processing', 'OCR', 'Chunking & Metadata', 'Prompting', 'Retrieval Evaluation', 'PyTorch'],
+    items: ['PyTorch', 'Neural Networks', 'Prompting', 'Model Compression', 'OCR', 'Evaluation'],
   },
   'Programming': {
     color: '#00d4ff',

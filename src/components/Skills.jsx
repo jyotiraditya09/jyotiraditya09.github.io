@@ -84,7 +84,7 @@ export default function Skills() {
               <span className="gradient-text">stack</span>
             </h2>
             <p className="mt-3 text-sm max-w-xl" style={{ color: 'var(--muted)' }}>
-              Python, retrieval, document AI, and the production stack I ship with.
+              Python and the stack I use to ship production systems.
             </p>
           </div>
         </motion.div>
@@ -119,16 +119,16 @@ export default function Skills() {
                 pct: 100,
               },
               {
-                name: 'Document AI & RAG',
-                score: 'Production + lab',
-                note: 'YuJa + Dehnavi lab',
+                name: 'AI / LLMs',
+                score: 'YuJa + UofT',
+                note: 'Production systems, compression',
                 color: 'var(--cyan)',
                 pct: 88,
               },
               {
-                name: 'Production services',
-                score: 'FastAPI · pipelines',
-                note: 'Bell, RBC, YuJa',
+                name: 'Production systems',
+                score: 'Python · pipelines',
+                note: 'YuJa, Bell, RBC',
                 color: 'var(--purple)',
                 pct: 82,
               },

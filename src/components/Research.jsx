@@ -96,7 +96,7 @@ export default function Research() {
               <span className="gradient-text-purple">AI work</span>
             </h2>
             <p className="mt-3 text-sm max-w-xl" style={{ color: 'var(--muted)' }}>
-              LLM systems I have built and evaluated — retrieval, compression, and applied ML tooling.
+              Efficient LLMs and applied ML at UofT.
             </p>
           </div>
         </motion.div>

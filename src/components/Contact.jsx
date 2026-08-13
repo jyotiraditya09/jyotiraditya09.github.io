@@ -57,7 +57,7 @@ export default function Contact() {
               <span className="gradient-text">connect</span>
             </h2>
             <p className="mt-4 text-base max-w-xl" style={{ color: 'var(--muted)' }}>
-              Whether it's shipping an AI assistant, a retrieval pipeline, or a messy production problem,
+              Whether it's an AI system to ship or a messy production problem to debug,
               I'm always open to interesting conversations.
             </p>
           </div>

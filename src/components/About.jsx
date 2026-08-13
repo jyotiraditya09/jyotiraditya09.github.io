@@ -4,8 +4,8 @@ import { personal, education } from '../data/portfolio'
 
 const HIGHLIGHTS = [
   { icon: '📐', label: 'Competitive Exams', sub: 'IMO & IChO National Qualifier' },
-  { icon: '📄', label: 'Document AI', sub: 'OCR, PDFs, accessibility workflows' },
-  { icon: '🧬', label: 'LLM Systems', sub: 'RAG, compression, retrieval' },
+  { icon: '🧬', label: 'AI Engineering', sub: 'Production systems at YuJa' },
+  { icon: '⚙', label: 'LLM Systems', sub: 'Compression and efficient inference' },
   { icon: '💻', label: 'Software Engineering', sub: 'Python, FastAPI, SQL' },
 ]
 
@@ -38,15 +38,15 @@ export default function About() {
                 <p>
                   I'm a final-year Computer Science, Statistics & Mathematics student at the{' '}
                   <span style={{ color: 'var(--text)', fontWeight: 600 }}>University of Toronto</span>
-                  , building production AI systems — document pipelines, retrieval, and LLM applications.
+                  {' '}and an AI Engineer at YuJa.
                 </p>
                 <p>
-                  I currently ship{' '}
-                  <span style={{ color: 'var(--purple)' }}>document AI</span> at YuJa (OCR, accessibility remediation, multi-format PDFs),
-                  previously built{' '}
-                  <span style={{ color: 'var(--green)' }}>production data and ML systems</span> at CC&L and RBC Capital Markets,
-                  and implement{' '}
-                  <span style={{ color: 'var(--cyan)' }}>LLM compression and RAG pipelines</span> at UofT.
+                  I currently build{' '}
+                  <span style={{ color: 'var(--purple)' }}>production AI systems</span> at YuJa,
+                  previously shipped{' '}
+                  <span style={{ color: 'var(--green)' }}>data and ML systems</span> at CC&L and RBC Capital Markets,
+                  and work on{' '}
+                  <span style={{ color: 'var(--cyan)' }}>efficient LLMs</span> at UofT.
                 </p>
                 <p>
                   I care about code quality, evaluation, and getting systems to production — not just prototypes.
