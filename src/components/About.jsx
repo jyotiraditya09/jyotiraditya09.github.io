@@ -4,9 +4,9 @@ import { personal, education } from '../data/portfolio'
 
 const HIGHLIGHTS = [
   { icon: '📐', label: 'Competitive Exams', sub: 'IMO & IChO National Qualifier' },
-  { icon: '📊', label: 'Quant', sub: 'Markets × Statistics × ML' },
-  { icon: '🧬', label: 'ML Research', sub: 'LLMs, Attention, AI Fairness' },
-  { icon: '💻', label: 'Software Engineering', sub: 'Python, Java, R, SQL' },
+  { icon: '📄', label: 'Document AI', sub: 'OCR, PDFs, accessibility workflows' },
+  { icon: '🧬', label: 'LLM Systems', sub: 'RAG, compression, retrieval' },
+  { icon: '💻', label: 'Software Engineering', sub: 'Python, FastAPI, SQL' },
 ]
 
 export default function About() {
@@ -38,17 +38,19 @@ export default function About() {
                 <p>
                   I'm a final-year Computer Science, Statistics & Mathematics student at the{' '}
                   <span style={{ color: 'var(--text)', fontWeight: 600 }}>University of Toronto</span>
-                  {' '}, working at the intersection of quantitative finance, machine learning, and AI research.
+                  , building production AI systems — document pipelines, retrieval, and LLM applications.
                 </p>
                 <p>
-                  My journey spans{' '}
-                  <span style={{ color: 'var(--green)' }}>quant trading</span> at RBC Capital Markets,{' '}
-                  <span style={{ color: 'var(--cyan)' }}>quant research</span> at CC&L Investment Management, and{' '}
-                  <span style={{ color: 'var(--purple)' }}>ML research</span> at UofT, from building alpha signals on tick-level data to researching LLM compression and proportionally fair clusturing algorithms.
+                  I currently ship{' '}
+                  <span style={{ color: 'var(--purple)' }}>document AI</span> at YuJa (OCR, accessibility remediation, multi-format PDFs),
+                  previously built{' '}
+                  <span style={{ color: 'var(--green)' }}>production data and ML systems</span> at CC&L and RBC Capital Markets,
+                  and implement{' '}
+                  <span style={{ color: 'var(--cyan)' }}>LLM compression and RAG pipelines</span> at UofT.
                 </p>
                 <p>
-                  I love elegant mathematics, puzzles, and the thrill of turning noisy signals and mispricing in financial markets into competitive edge.
-                  Outside of work, I'm a sports enthusiast, I love cricket, soccer and tennis.
+                  I care about code quality, evaluation, and getting systems to production — not just prototypes.
+                  Outside of work, I'm a sports enthusiast: cricket, soccer, and tennis.
                 </p>
               </div>
 

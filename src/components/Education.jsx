@@ -60,7 +60,7 @@ export default function Education() {
                   }}
                 >
                   <div className="text-2xl font-bold" style={{ color: 'var(--green)' }}>
-                    3.90
+                    3.91
                   </div>
                   <div className="text-xs" style={{ color: 'var(--muted)' }}>GPA / 4.0</div>
                 </div>

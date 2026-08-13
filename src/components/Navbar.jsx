@@ -4,7 +4,7 @@ import { personal } from '../data/portfolio'
 const NAV_LINKS = [
   { id: 'about', label: 'about' },
   { id: 'experience', label: 'experience' },
-  { id: 'research', label: 'research' },
+  { id: 'research', label: 'ai_systems' },
   { id: 'skills', label: 'skills' },
   { id: 'education', label: 'education' },
   { id: 'contact', label: 'contact' },

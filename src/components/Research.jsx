@@ -90,13 +90,13 @@ export default function Research() {
           transition={{ duration: 0.5 }}
         >
           <div className="mb-14">
-            <p className="section-label">03. research_experience</p>
+            <p className="section-label">03. ai_systems</p>
             <h2 className="section-title">
-              Academic{' '}
-              <span className="gradient-text-purple">research</span>
+              Selected{' '}
+              <span className="gradient-text-purple">AI work</span>
             </h2>
             <p className="mt-3 text-sm max-w-xl" style={{ color: 'var(--muted)' }}>
-              Pushing the frontier of ML theory - from LLM compression to algorithmic fairness.
+              LLM systems I have built and evaluated — retrieval, compression, and applied ML tooling.
             </p>
           </div>
         </motion.div>

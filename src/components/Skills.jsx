@@ -84,7 +84,7 @@ export default function Skills() {
               <span className="gradient-text">stack</span>
             </h2>
             <p className="mt-3 text-sm max-w-xl" style={{ color: 'var(--muted)' }}>
-              From coding libraries to quantitative and ML skills, my full stack.
+              Python, retrieval, document AI, and the production stack I ship with.
             </p>
           </div>
         </motion.div>
@@ -114,21 +114,21 @@ export default function Skills() {
               {
                 name: 'Python',
                 score: '5 yrs exp.',
-                note: 'Bell, RBCCM',
+                note: 'YuJa, Bell, RBC',
                 color: 'var(--green)',
                 pct: 100,
               },
               {
-                name: 'Quantitative Finance',
-                score: '2 yrs exp.',
-                note: 'RBCCM + CC&L',
+                name: 'Document AI & RAG',
+                score: 'Production + lab',
+                note: 'YuJa + Dehnavi lab',
                 color: 'var(--cyan)',
                 pct: 88,
               },
               {
-                name: 'AI/ML Research',
-                score: '3 labs',
-                note: 'UofT CS + Stats',
+                name: 'Production services',
+                score: 'FastAPI · pipelines',
+                note: 'Bell, RBC, YuJa',
                 color: 'var(--purple)',
                 pct: 82,
               },
