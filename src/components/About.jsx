@@ -36,9 +36,9 @@ export default function About() {
             <div>
               <div className="space-y-4 text-base leading-relaxed" style={{ color: '#94a3b8' }}>
                 <p>
-                  I'm a final-year Computer Science, Statistics & Mathematics student at the{' '}
+                  I'm a{' '}
                   <span style={{ color: 'var(--text)', fontWeight: 600 }}>University of Toronto</span>
-                  {' '}and an AI Engineer at YuJa.
+                  {' '}graduate in Computer Science, Statistics & Mathematics, and an AI Engineer at YuJa.
                 </p>
                 <p>
                   I currently build{' '}
