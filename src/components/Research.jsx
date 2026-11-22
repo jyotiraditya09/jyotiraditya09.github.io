@@ -12,7 +12,7 @@ function ResearchCard({ item, index }) {
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.15 }}
-      className={`card p-6 flex flex-col gap-4 ${item.featured ? 'md:col-span-2' : ''}`}
+      className="card p-6 flex flex-col gap-4"
       style={{ height: '100%' }}
     >
       {/* Top bar */}
@@ -50,23 +50,9 @@ function ResearchCard({ item, index }) {
       </div>
 
       {/* Description */}
-      <p
-        className={`text-base leading-relaxed ${item.highlights ? '' : 'flex-1'}`}
-        style={{ color: item.highlights ? '#cbd5e1' : '#94a3b8' }}
-      >
+      <p className="text-base leading-relaxed flex-1" style={{ color: '#94a3b8' }}>
         {item.description}
       </p>
-
-      {item.highlights && (
-        <ul className="flex-1 grid lg:grid-cols-2 gap-x-8 gap-y-3">
-          {item.highlights.map((h) => (
-            <li key={h} className="flex gap-3 text-base leading-relaxed" style={{ color: '#94a3b8' }}>
-              <span className="mt-0.5 shrink-0 font-mono" style={{ color: item.color }}>▸</span>
-              {h}
-            </li>
-          ))}
-        </ul>
-      )}
 
       {/* Tags */}
       <div className="flex flex-wrap gap-1.5">
@@ -115,7 +101,7 @@ export default function Research() {
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           {research.map((item, i) => (
             <ResearchCard key={item.title} item={item} index={i} />
           ))}

@@ -3,9 +3,9 @@ import { motion, useInView } from 'framer-motion'
 import { personal, education } from '../data/portfolio'
 
 const HIGHLIGHTS = [
-  { icon: '📊', label: 'Quant Research', sub: 'Alpha signals at RBC and CC&L' },
-  { icon: '⚖️', label: 'AI Fairness Research', sub: 'LLMs × cooperative game theory' },
   { icon: '🧠', label: 'ML/AI Engineering', sub: 'Vision-language OCR at YuJa' },
+  { icon: '⚖️', label: 'AI Research', sub: 'LLM fairness and compression' },
+  { icon: '📊', label: 'Quant Research', sub: 'RBC Capital Markets, CC&L' },
   { icon: '📐', label: 'Competitive Exams', sub: 'IChO National Qualifier' },
 ]
 
@@ -39,27 +39,19 @@ export default function About() {
                   I'm a{' '}
                   <span style={{ color: 'var(--text)', fontWeight: 600 }}>University of Toronto</span>
                   {' '}graduate in Computer Science and Statistics (double major) with a minor in Mathematics,
-                  working at the intersection of machine learning, quantitative finance, and AI research.
+                  and currently an ML/AI Engineer at YuJa.
                 </p>
                 <p>
-                  In markets, alpha signals get hit by unexpected events and decay over time. That is what drives
-                  my research interest:{' '}
-                  <span style={{ color: 'var(--text)' }}>reliable statistical and machine learning methods for prediction</span>,
-                  and models that account for that uncertainty.
+                  I'm interested in reliable statistical and machine learning methods for prediction: models that
+                  hold up on noisy, changing data. I've worked on this in{' '}
+                  <span style={{ color: 'var(--purple)' }}>production ML</span> at YuJa,{' '}
+                  <span style={{ color: 'var(--green)' }}>quantitative research</span> at RBC Capital Markets and CC&L,
+                  and{' '}
+                  <span style={{ color: 'var(--cyan)' }}>AI research</span> on fairness and LLM compression at UofT.
                 </p>
                 <p>
-                  I'm currently an{' '}
-                  <span style={{ color: 'var(--purple)' }}>ML/AI Engineer</span> at YuJa, training vision-language
-                  models for OCR and running them in production. Before that I did{' '}
-                  <span style={{ color: 'var(--green)' }}>quant trading</span> at RBC Capital Markets,{' '}
-                  <span style={{ color: 'var(--cyan)' }}>quant research</span> at CC&L Investment Management, and{' '}
-                  <span style={{ color: 'var(--purple)' }}>ML research</span> at UofT, from building alpha signals on
-                  tick-level data to auditing LLM summaries for fairness.
-                </p>
-                <p>
-                  I love elegant mathematics, puzzles, and the thrill of turning noisy signals and mispricing in
-                  financial markets into a competitive edge, and I want to build my career in quantitative research.
-                  Outside of work, I'm a sports enthusiast: cricket, soccer, and tennis.
+                  I love elegant mathematics and puzzles. Outside of work, I'm a sports enthusiast: cricket, soccer,
+                  and tennis.
                 </p>
               </div>
 

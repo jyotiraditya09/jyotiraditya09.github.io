@@ -4,9 +4,9 @@ export const personal = {
   linkedin: 'https://linkedin.com/in/jyotirgupta',
   github: 'https://github.com/jyotiraditya09',
   roles: [
-    'Quantitative Researcher',
     'ML/AI Engineer',
     'Data Scientist',
+    'Quantitative Researcher',
   ],
   tagline: 'I work on reliable statistical and machine learning methods for prediction under uncertainty.',
   stats: [
@@ -45,18 +45,16 @@ export const experience = [
     location: 'Toronto, ON',
     color: '#8b5cf6',
     bullets: [
-      'Trained a vision-language model on thousands of PDFs, raising OCR accuracy from 90% to 98% across 5M PDFs per month for institutional clients.',
-      'Extended a ResNet backbone with multi-head cross-attention to match fonts by size and type, then reconstruct fully editable PDFs from scanned and corrupted files.',
-      'Raised automated remediation of accessibility issues from 33% to over 80% across 50+ issue types in PDF and XML, greatly reducing manual effort.',
-      'Responsible for deploying and operating these models in production pods.',
+      'Trained a vision-language model (ResNet backbone with multi-head cross-attention) that raised OCR accuracy from 90% to 98% across 5M PDFs per month.',
+      'Raised automated accessibility remediation from 33% to over 80% across 50+ issue types.',
+      'Responsible for deploying and operating these models in production.',
     ],
     metrics: [
       { label: 'OCR Accuracy', value: '90→98%', color: '#00d4ff' },
       { label: 'PDFs / Month', value: '5M', color: '#f59e0b' },
       { label: 'Auto-Remediation', value: '33→80%+', color: '#00ff88' },
-      { label: 'Issue Types', value: '50+', color: '#8b5cf6' },
     ],
-    tags: ['PyTorch', 'Vision-Language Models', 'ResNet', 'Cross-Attention', 'OCR', 'Kubernetes'],
+    tags: ['Python', 'PyTorch', 'Vision-Language Models', 'OCR', 'Kubernetes'],
   },
   {
     role: 'Quantitative Research Intern',
@@ -66,15 +64,11 @@ export const experience = [
     location: 'Vancouver, BC',
     color: '#00ff88',
     bullets: [
-      'Studied implied volatility skew as a predictor of longer-term equity returns: learned the Greeks and reviewed 20+ papers on options-implied signals (IV skew, IV spread) to understand the limits of existing work.',
-      'Built a time-weighted signal from options-chain data using cross-sectional regression, adding interaction terms between company characteristics to strengthen it.',
-      'Validated it with multivariate lagged backtests in R. After correcting inconsistencies in the underlying data, the signal generated 25 bps of annualized excess return and was selected by the PMs for further research.',
+      'Built an equity return signal from options-implied volatility skew using cross-sectional regression, after reviewing 20+ papers on options-implied signals.',
+      'Validated it with multivariate backtests in R: +25 bps of annualized excess return, selected by the PMs for further research.',
     ],
-    metrics: [
-      { label: 'Annualized Alpha', value: '+25 bps', color: '#00ff88' },
-      { label: 'Papers Reviewed', value: '20+', color: '#00d4ff' },
-    ],
-    tags: ['R', 'Python', 'Options Data', 'Cross-Sectional Regression', 'Backtesting'],
+    metrics: [{ label: 'Annualized Alpha', value: '+25 bps', color: '#00ff88' }],
+    tags: ['R', 'Python', 'Regression', 'Backtesting'],
   },
   {
     role: 'Quantitative Trading Analyst',
@@ -84,19 +78,15 @@ export const experience = [
     location: 'Toronto, ON',
     color: '#00d4ff',
     bullets: [
-      'Took over a teammate’s project three months into the year-long role on a short handover, and later became primary owner of the desk’s backtesting engine.',
-      'Worked with a high-frequency order dataset of 50+ interacting columns. When vendor issues forced a format overhaul, learned the old format first so the new one was interpreted correctly.',
-      'Segmenting orders by completion rate showed only part of the flow was profitable, a relationship the existing strategy did not use. My backtested version was deployed the same week: Sharpe ratio rose from 1.2 to 2.25, average daily PnL roughly doubled, and fill quality improved by 30%.',
-      'Deployed 2 alpha signals from proprietary tick-level data. On a separate overnight strategy, reduced inventory risk by 6.7% and increased PnL by 22%.',
+      'Took over a teammate’s project and became primary owner of the desk’s backtesting engine.',
+      'Identified a link between order completion rate and profitability that the existing strategy missed; my update, deployed the same week, raised Sharpe ratio from 1.2 to 2.25 and roughly doubled average daily PnL.',
       'Built research tools in Python and KDB/Q that cut strategy evaluation runtime by 30%.',
     ],
     metrics: [
       { label: 'Sharpe Ratio', value: '1.2→2.25', color: '#00d4ff' },
       { label: 'Avg Daily PnL', value: '~2×', color: '#00ff88' },
-      { label: 'Fill Quality ↑', value: '+30%', color: '#8b5cf6' },
-      { label: 'Overnight Risk ↓', value: '-6.7%', color: '#ff6b6b' },
     ],
-    tags: ['Python', 'KDB/Q', 'SQL', 'High-Frequency Data', 'Market Microstructure', 'Backtesting'],
+    tags: ['Python', 'KDB/Q', 'SQL', 'Time Series', 'Backtesting'],
   },
   {
     role: 'Software Engineering Intern',
@@ -120,21 +110,13 @@ export const experience = [
 
 export const research = [
   {
-    title: 'Auditing LLM Summaries of Public Opinion for Fairness',
+    title: 'Fairness in LLM Summarization',
     institution: 'Department of Computer Science, UofT',
     advisor: 'Prof. Nisarg Shah',
     period: 'Jan 2026 – Jun 2026',
     color: '#00ff88',
-    featured: true,
-    description: 'Do LLM-written summaries of public opinion fairly represent the people being summarized? Even defining what to measure took real mathematical work, so the project turned ideas from cooperative game theory into metrics I could compute and test.',
-    highlights: [
-      'Built an end-to-end pipeline (embedding, fair clustering, LLM summarization, fairness auditing) on 5 Polis opinion datasets (6.9K comments), embedding free text in up to 3,072 dimensions and benchmarking 6 clustering algorithms.',
-      'Used a mixed-integer linear program, grounded in cooperative game theory, to find the worst-off group of participants, with PCA to keep it solvable.',
-      'Caught that my Fully Justified Representation (FJR) ratio did not exactly match its formal definition, corrected it, and reran the tests.',
-      'When the optimization showed a fairer summary existed mathematically, tested whether an LLM could actually write one before claiming it.',
-      'Showed that embedding distance predicts which comment a respondent prefers to be grouped with, at 84–87% agreement across 1,578 judgments from 6 LLM judges.',
-    ],
-    tags: ['Python', 'LLMs', 'Embeddings', 'Fair Clustering', 'Mixed-Integer Programming', 'PCA', 'Cooperative Game Theory'],
+    description: 'Tested whether LLM-written summaries of public opinion fairly represent the participants. Built a pipeline of embeddings, fair clustering, LLM summarization, and fairness auditing on Polis data, using a mixed-integer program from cooperative game theory to find the worst-off group.',
+    tags: ['Python', 'LLMs', 'Embeddings', 'Fair Clustering', 'Optimization'],
     icon: '⚖️',
   },
   {
@@ -143,8 +125,8 @@ export const research = [
     advisor: 'Prof. Maryam Mehri Dehnavi (Principal at NVIDIA)',
     period: 'Sep 2025 – Dec 2025',
     color: '#00d4ff',
-    description: 'Benchmarked a new LLM pruning method against 6 existing techniques across 6 models (0.5B–13B parameters) and 8 tasks. Reproduced competing methods in PyTorch and measured GPU inference speed and memory, including 4-bit quantized variants.',
-    tags: ['PyTorch', 'Pruning', '4-bit Quantization', 'GPU Benchmarking', 'LLMs'],
+    description: 'Benchmarked a new LLM pruning method against 6 existing techniques on models from 0.5B to 13B parameters, measuring accuracy, GPU inference speed, and memory, including 4-bit quantized variants.',
+    tags: ['PyTorch', 'Pruning', 'Quantization', 'LLMs'],
     icon: '🧠',
   },
   {
@@ -160,15 +142,15 @@ export const research = [
 ]
 
 export const skills = {
-  'Statistics & Quant': {
-    color: '#00d4ff',
-    icon: '∑',
-    items: ['Cross-Sectional Regression', 'Time-Series Analysis', 'Multivariate Statistics', 'Optimization (MILP)', 'Signal Research', 'Backtesting', 'Market Microstructure'],
-  },
   'Machine Learning': {
     color: '#00ff88',
     icon: '◈',
-    items: ['Statistical Learning', 'Deep Learning', 'Computer Vision', 'LLMs & Transformers', 'Clustering & Embeddings', 'Dimensionality Reduction', 'Model Compression'],
+    items: ['Deep Learning', 'Computer Vision', 'LLMs & Transformers', 'Statistical Learning', 'Clustering & Embeddings', 'Model Compression'],
+  },
+  'Statistics & Quant': {
+    color: '#00d4ff',
+    icon: '∑',
+    items: ['Regression', 'Time-Series Analysis', 'Multivariate Statistics', 'Optimization', 'Signal Research', 'Backtesting'],
   },
   'Languages': {
     color: '#8b5cf6',
