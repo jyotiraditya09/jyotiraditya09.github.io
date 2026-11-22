@@ -84,7 +84,7 @@ export default function Skills() {
               <span className="gradient-text">stack</span>
             </h2>
             <p className="mt-3 text-sm max-w-xl" style={{ color: 'var(--muted)' }}>
-              Python and the stack I use to ship production systems.
+              The statistical, ML, and engineering tools behind my research and work.
             </p>
           </div>
         </motion.div>

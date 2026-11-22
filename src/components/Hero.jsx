@@ -91,7 +91,7 @@ export default function Hero() {
             </h1>
 
             {/* Animated role */}
-            <div className="flex items-center gap-2 mb-6" style={{ height: '2rem' }}>
+            <div className="flex items-center justify-center gap-2 mb-6" style={{ height: '2rem' }}>
               <span className="font-mono text-lg" style={{ color: 'var(--cyan)', opacity: 0.7 }}>
                 //
               </span>

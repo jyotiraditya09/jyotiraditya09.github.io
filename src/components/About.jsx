@@ -3,9 +3,9 @@ import { motion, useInView } from 'framer-motion'
 import { personal, education } from '../data/portfolio'
 
 const HIGHLIGHTS = [
-  { icon: '🧠', label: 'ML/AI Engineering', sub: 'Production systems at YuJa' },
-  { icon: '📊', label: 'Quant', sub: 'Markets × Statistics × ML' },
-  { icon: '🧬', label: 'ML Research', sub: 'LLM Compression, AI Fairness' },
+  { icon: '📊', label: 'Quant Research', sub: 'Alpha signals at RBC and CC&L' },
+  { icon: '⚖️', label: 'AI Fairness Research', sub: 'LLMs × cooperative game theory' },
+  { icon: '🧠', label: 'ML/AI Engineering', sub: 'Vision-language OCR at YuJa' },
   { icon: '📐', label: 'Competitive Exams', sub: 'IChO National Qualifier' },
 ]
 
@@ -38,22 +38,28 @@ export default function About() {
                 <p>
                   I'm a{' '}
                   <span style={{ color: 'var(--text)', fontWeight: 600 }}>University of Toronto</span>
-                  {' '}graduate in Computer Science and Statistics with a minor in Mathematics, working at the
-                  intersection of machine learning, quantitative finance, and AI research.
+                  {' '}graduate in Computer Science and Statistics (double major) with a minor in Mathematics,
+                  working at the intersection of machine learning, quantitative finance, and AI research.
+                </p>
+                <p>
+                  In markets, alpha signals get hit by unexpected events and decay over time. That is what drives
+                  my research interest:{' '}
+                  <span style={{ color: 'var(--text)' }}>reliable statistical and machine learning methods for prediction</span>,
+                  and models that account for that uncertainty.
                 </p>
                 <p>
                   I'm currently an{' '}
-                  <span style={{ color: 'var(--purple)' }}>ML/AI Engineer</span> at YuJa, building document AI and OCR
-                  systems. Before that I did{' '}
+                  <span style={{ color: 'var(--purple)' }}>ML/AI Engineer</span> at YuJa, training vision-language
+                  models for OCR and running them in production. Before that I did{' '}
                   <span style={{ color: 'var(--green)' }}>quant trading</span> at RBC Capital Markets,{' '}
                   <span style={{ color: 'var(--cyan)' }}>quant research</span> at CC&L Investment Management, and{' '}
                   <span style={{ color: 'var(--purple)' }}>ML research</span> at UofT, from building alpha signals on
-                  tick-level data to researching LLM compression and proportionally fair clustering.
+                  tick-level data to auditing LLM summaries for fairness.
                 </p>
                 <p>
                   I love elegant mathematics, puzzles, and the thrill of turning noisy signals and mispricing in
-                  financial markets into a competitive edge. Outside of work, I'm a sports enthusiast: cricket,
-                  soccer, and tennis.
+                  financial markets into a competitive edge, and I want to build my career in quantitative research.
+                  Outside of work, I'm a sports enthusiast: cricket, soccer, and tennis.
                 </p>
               </div>
 
@@ -78,8 +84,25 @@ export default function About() {
               </div>
             </div>
 
-            {/* Highlights grid */}
-            <div className="grid grid-cols-2 gap-4">
+            <div>
+              {/* Working principle */}
+              <div
+                className="rounded-lg p-5 mb-4 font-mono"
+                style={{ background: 'rgba(5,5,16,0.8)', border: '1px solid #1a1a2e' }}
+              >
+                <div className="text-xs mb-3" style={{ color: 'var(--muted)' }}>
+                  <span style={{ color: 'var(--green)' }}>$</span> cat before_every_project.txt
+                </div>
+                {['Where did the data come from?', 'Am I measuring the right thing?'].map((q, i) => (
+                  <div key={q} className="flex gap-3 mt-2 text-sm">
+                    <span style={{ color: 'var(--cyan)' }}>{`0${i + 1}`}</span>
+                    <span style={{ color: '#cbd5e1' }}>{q}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Highlights grid */}
+              <div className="grid grid-cols-2 gap-4">
               {HIGHLIGHTS.map((h, i) => (
                 <motion.div
                   key={h.label}
@@ -97,6 +120,7 @@ export default function About() {
                   </div>
                 </motion.div>
               ))}
+              </div>
             </div>
           </div>
         </motion.div>
