@@ -1,127 +1,75 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { personal } from '../data/portfolio'
 
-const NAV_LINKS = [
-  { id: 'about', label: 'about' },
-  { id: 'experience', label: 'experience' },
-  { id: 'research', label: 'research' },
-  { id: 'skills', label: 'skills' },
-  { id: 'education', label: 'education' },
-  { id: 'contact', label: 'contact' },
+const LINKS = [
+  { id: 'about', label: 'About' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'research', label: 'Research' },
+  { id: 'education', label: 'Education' },
+  { id: 'contact', label: 'Contact' },
 ]
 
-export default function Navbar({ activeSection }) {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [active, setActive] = useState('')
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
+    // Highlight the last section whose top has passed 40% of the viewport height.
+    const update = () => {
+      setScrolled(window.scrollY > 24)
+      const line = window.innerHeight * 0.4
+      let current = ''
+      LINKS.forEach(({ id }) => {
+        const el = document.getElementById(id)
+        if (el && el.getBoundingClientRect().top <= line) current = id
+      })
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2
+      setActive(atBottom ? LINKS[LINKS.length - 1].id : current)
+    }
+    update()
+    window.addEventListener('scroll', update, { passive: true })
+    window.addEventListener('resize', update)
+    return () => {
+      window.removeEventListener('scroll', update)
+      window.removeEventListener('resize', update)
+    }
   }, [])
-
-  const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-    setMenuOpen(false)
-  }
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-      style={{
-        background: scrolled ? 'rgba(3,3,9,0.92)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(16px)' : 'none',
-        borderBottom: scrolled ? '1px solid #1a1a2e' : '1px solid transparent',
-      }}
+      aria-label="Primary"
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-colors duration-300 ${
+        scrolled ? 'border-line bg-canvas/85 backdrop-blur-md' : 'border-transparent'
+      }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <button
-          onClick={() => scrollTo('hero')}
-          className="font-mono text-sm font-bold transition-colors duration-200"
-          style={{ color: 'var(--green)' }}
-        >
-          <span style={{ color: 'var(--muted)' }}>&lt;</span>
-          JG
-          <span style={{ color: 'var(--muted)' }}>/&gt;</span>
-        </button>
-
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
-          {NAV_LINKS.map((link) => (
-            <button
-              key={link.id}
-              onClick={() => scrollTo(link.id)}
-              className={`nav-link ${activeSection === link.id ? 'active' : ''}`}
-            >
-              <span style={{ color: 'var(--green)', opacity: 0.6 }}>./</span>
-              {link.label}
-            </button>
-          ))}
-        </div>
-
-        {/* CTA */}
-        <a
-          href={personal.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-md font-mono text-xs font-medium transition-all duration-200"
-          style={{
-            border: '1px solid var(--green)',
-            color: 'var(--green)',
-            background: 'rgba(0,255,136,0.05)',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = 'rgba(0,255,136,0.12)'
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = 'rgba(0,255,136,0.05)'
-          }}
-        >
-          $ connect
+      <div className="page flex h-16 items-center justify-between">
+        <a href="#top" className="text-sm font-semibold tracking-tight text-ink">
+          {personal.name}
         </a>
-
-        {/* Mobile Hamburger */}
-        <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          {[0, 1, 2].map((i) => (
-            <span
-              key={i}
-              className="block h-0.5 w-6 rounded transition-all duration-300"
-              style={{
-                background: 'var(--green)',
-                transform: menuOpen
-                  ? i === 0 ? 'rotate(45deg) translateY(8px)'
-                  : i === 2 ? 'rotate(-45deg) translateY(-8px)'
-                  : 'scaleX(0)'
-                  : 'none',
-              }}
-            />
-          ))}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div
-          className="md:hidden px-6 pb-6 flex flex-col gap-4"
-          style={{ background: 'rgba(3,3,9,0.97)', borderTop: '1px solid #1a1a2e' }}
-        >
-          {NAV_LINKS.map((link) => (
-            <button
-              key={link.id}
-              onClick={() => scrollTo(link.id)}
-              className="text-left nav-link py-2"
-            >
-              <span style={{ color: 'var(--green)', opacity: 0.6 }}>./</span>
-              {link.label}
-            </button>
-          ))}
+        <div className="flex items-center gap-7">
+          <ul className="hidden items-center gap-7 text-sm md:flex">
+            {LINKS.map(({ id, label }) => (
+              <li key={id}>
+                <a
+                  href={`#${id}`}
+                  aria-current={active === id ? 'true' : undefined}
+                  className={`transition-colors ${active === id ? 'text-ink' : 'text-muted hover:text-ink'}`}
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            href={personal.cv}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg border border-line-strong px-3 py-1.5 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent"
+          >
+            CV
+          </a>
         </div>
-      )}
+      </div>
     </nav>
   )
 }

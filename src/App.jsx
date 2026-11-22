@@ -1,52 +1,33 @@
-import { useState, useEffect } from 'react'
-import MatrixBackground from './components/MatrixBackground'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Experience from './components/Experience'
 import Research from './components/Research'
-import Skills from './components/Skills'
 import Education from './components/Education'
+import Skills from './components/Skills'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
-function App() {
-  const [activeSection, setActiveSection] = useState('hero')
-
-  useEffect(() => {
-    const sections = ['hero', 'about', 'experience', 'research', 'skills', 'education', 'contact']
-    const observers = []
-
-    sections.forEach((id) => {
-      const el = document.getElementById(id)
-      if (!el) return
-      const obs = new IntersectionObserver(
-        ([entry]) => { if (entry.isIntersecting) setActiveSection(id) },
-        { rootMargin: '-40% 0px -40% 0px' }
-      )
-      obs.observe(el)
-      observers.push(obs)
-    })
-
-    return () => observers.forEach((o) => o.disconnect())
-  }, [])
-
+export default function App() {
   return (
-    <div className="relative min-h-screen" style={{ background: 'var(--bg)' }}>
-      <MatrixBackground />
-      <Navbar activeSection={activeSection} />
-      <main>
+    <>
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-accent-ink"
+      >
+        Skip to content
+      </a>
+      <Navbar />
+      <main id="main">
         <Hero />
         <About />
         <Experience />
         <Research />
-        <Skills />
         <Education />
+        <Skills />
         <Contact />
       </main>
       <Footer />
-    </div>
+    </>
   )
 }
-
-export default App

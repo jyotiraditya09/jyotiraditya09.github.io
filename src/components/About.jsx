@@ -1,122 +1,38 @@
-import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
-import { personal, education } from '../data/portfolio'
+import Section from './Section'
 
-const HIGHLIGHTS = [
-  { icon: '🧠', label: 'ML/AI Engineering', sub: 'Vision-language OCR at YuJa' },
-  { icon: '⚖️', label: 'AI Research', sub: 'LLM fairness and compression' },
-  { icon: '📊', label: 'Quant Research', sub: 'RBC Capital Markets, CC&L' },
-  { icon: '📐', label: 'Competitive Exams', sub: 'IChO National Qualifier' },
-]
+const QUESTIONS = ['Where did the data come from?', 'Am I measuring the right thing?']
 
 export default function About() {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-100px' })
-
   return (
-    <section id="about" className="relative py-16 z-10">
-      <div className="max-w-6xl mx-auto px-6">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
-          {/* Section header */}
-          <div className="mb-14">
-            <p className="section-label">01. who_am_i</p>
-            <h2 className="section-title">
-              About{' '}
-              <span className="gradient-text">me</span>
-            </h2>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Bio */}
-            <div>
-              <div className="space-y-4 text-base leading-relaxed" style={{ color: '#94a3b8' }}>
-                <p>
-                  I'm a{' '}
-                  <span style={{ color: 'var(--text)', fontWeight: 600 }}>University of Toronto</span>
-                  {' '}graduate in Computer Science and Statistics (double major) with a minor in Mathematics,
-                  and currently an ML/AI Engineer at YuJa.
-                </p>
-                <p>
-                  I'm interested in reliable statistical and machine learning methods for prediction: models that
-                  hold up on noisy, changing data. I've worked on this in{' '}
-                  <span style={{ color: 'var(--purple)' }}>production ML</span> at YuJa,{' '}
-                  <span style={{ color: 'var(--green)' }}>quantitative research</span> at RBC Capital Markets and CC&L,
-                  and{' '}
-                  <span style={{ color: 'var(--cyan)' }}>AI research</span> on fairness and LLM compression at UofT.
-                </p>
-                <p>
-                  I love elegant mathematics and puzzles. Outside of work, I'm a sports enthusiast: cricket, soccer,
-                  and tennis.
-                </p>
-              </div>
-
-              {/* Social links */}
-              <div className="flex gap-4 mt-8">
-                {[
-                  { label: 'github.com/jyotiraditya09', href: personal.github, color: 'var(--green)' },
-                  { label: 'linkedin.com/in/jyotirgupta', href: personal.linkedin, color: 'var(--cyan)' },
-                  { label: personal.email, href: `mailto:${personal.email}`, color: 'var(--purple)' },
-                ].map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-mono text-xs transition-opacity hover:opacity-70"
-                    style={{ color: link.color }}
-                  >
-                    ↗
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              {/* Working principle */}
-              <div
-                className="rounded-lg p-5 mb-4 font-mono"
-                style={{ background: 'rgba(5,5,16,0.8)', border: '1px solid #1a1a2e' }}
-              >
-                <div className="text-xs mb-3" style={{ color: 'var(--muted)' }}>
-                  <span style={{ color: 'var(--green)' }}>$</span> cat before_every_project.txt
-                </div>
-                {['Where did the data come from?', 'Am I measuring the right thing?'].map((q, i) => (
-                  <div key={q} className="flex gap-3 mt-2 text-sm">
-                    <span style={{ color: 'var(--cyan)' }}>{`0${i + 1}`}</span>
-                    <span style={{ color: '#cbd5e1' }}>{q}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Highlights grid */}
-              <div className="grid grid-cols-2 gap-4">
-              {HIGHLIGHTS.map((h, i) => (
-                <motion.div
-                  key={h.label}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={inView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.4, delay: 0.1 * i }}
-                  className="card p-5"
-                >
-                  <div className="text-2xl mb-3">{h.icon}</div>
-                  <div className="font-semibold text-sm mb-1" style={{ color: 'var(--text)' }}>
-                    {h.label}
-                  </div>
-                  <div className="font-mono text-xs" style={{ color: 'var(--muted)' }}>
-                    {h.sub}
-                  </div>
-                </motion.div>
-              ))}
-              </div>
-            </div>
-          </div>
-        </motion.div>
+    <Section id="about" title="About">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_17rem] lg:gap-12">
+        <div className="space-y-5 text-[17px] leading-relaxed text-ink-2">
+          <p>
+            I'm a <span className="text-ink">University of Toronto</span> graduate in Computer Science and Statistics
+            (double major) with a minor in Mathematics, and currently an ML/AI Engineer at YuJa.
+          </p>
+          <p>
+            I'm interested in reliable statistical and machine learning methods for prediction: models that hold up on
+            noisy, changing data. I've worked on this in production ML at YuJa, quantitative research at RBC Capital
+            Markets and CC&L, and AI research on fairness and LLM compression at UofT.
+          </p>
+          <p>
+            I love elegant mathematics and puzzles. Outside of work, I'm a sports enthusiast: cricket, soccer, and
+            tennis.
+          </p>
+        </div>
+        <aside className="self-start rounded-xl border border-line bg-surface p-5">
+          <p className="kicker text-muted">Before every project</p>
+          <ol className="mt-4 space-y-3">
+            {QUESTIONS.map((q, i) => (
+              <li key={q} className="flex gap-3 text-[15px] leading-snug text-ink">
+                <span className="font-mono text-sm text-accent">{String(i + 1).padStart(2, '0')}</span>
+                {q}
+              </li>
+            ))}
+          </ol>
+        </aside>
       </div>
-    </section>
+    </Section>
   )
 }
