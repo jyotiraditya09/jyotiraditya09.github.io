@@ -1,5 +1,6 @@
 import Section from './Section'
 import { FIGURES } from './Figures'
+import Metrics from './Metrics'
 import { research } from '../data/portfolio'
 
 export default function Research() {
@@ -19,6 +20,7 @@ export default function Research() {
                 <p className="mt-0.5 text-sm text-ink-2">
                   Advisor: {item.advisor} <span className="text-muted">· {item.institution}</span>
                 </p>
+                <Metrics items={item.metrics} />
                 <p className="mt-3 text-[15px] leading-relaxed text-ink-2">{item.description}</p>
                 <ul className="mt-4 flex flex-wrap gap-2" aria-label="Topics">
                   {item.tags.map((tag) => (

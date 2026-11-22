@@ -1,4 +1,5 @@
 import Section from './Section'
+import Metrics from './Metrics'
 import { experience } from '../data/portfolio'
 
 export default function Experience() {
@@ -13,6 +14,7 @@ export default function Experience() {
               <p className="mt-0.5 text-sm text-ink-2">
                 {job.company} <span className="text-muted">· {job.location}</span>
               </p>
+              <Metrics items={job.metrics} />
               <ul className="mt-4 space-y-2.5">
                 {job.bullets.map((bullet) => (
                   <li

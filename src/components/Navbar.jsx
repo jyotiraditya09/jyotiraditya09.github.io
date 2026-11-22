@@ -3,9 +3,9 @@ import { personal } from '../data/portfolio'
 
 const LINKS = [
   { id: 'about', label: 'About' },
+  { id: 'education', label: 'Education' },
   { id: 'experience', label: 'Experience' },
   { id: 'research', label: 'Research' },
-  { id: 'education', label: 'Education' },
   { id: 'contact', label: 'Contact' },
 ]
 
