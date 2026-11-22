@@ -3,10 +3,10 @@ import { motion, useInView } from 'framer-motion'
 import { personal, education } from '../data/portfolio'
 
 const HIGHLIGHTS = [
-  { icon: '📐', label: 'Competitive Exams', sub: 'IMO & IChO National Qualifier' },
-  { icon: '🧬', label: 'AI Engineering', sub: 'Production systems at YuJa' },
-  { icon: '⚙', label: 'LLM Systems', sub: 'Compression and efficient inference' },
-  { icon: '💻', label: 'Software Engineering', sub: 'Python, FastAPI, SQL' },
+  { icon: '🧠', label: 'ML/AI Engineering', sub: 'Production systems at YuJa' },
+  { icon: '📊', label: 'Quant', sub: 'Markets × Statistics × ML' },
+  { icon: '🧬', label: 'ML Research', sub: 'LLM Compression, AI Fairness' },
+  { icon: '📐', label: 'Competitive Exams', sub: 'IChO National Qualifier' },
 ]
 
 export default function About() {
@@ -38,19 +38,22 @@ export default function About() {
                 <p>
                   I'm a{' '}
                   <span style={{ color: 'var(--text)', fontWeight: 600 }}>University of Toronto</span>
-                  {' '}graduate in Computer Science, Statistics & Mathematics, and an ML/AI Engineer at YuJa.
+                  {' '}graduate in Computer Science and Statistics with a minor in Mathematics, working at the
+                  intersection of machine learning, quantitative finance, and AI research.
                 </p>
                 <p>
-                  I currently build{' '}
-                  <span style={{ color: 'var(--purple)' }}>production AI systems</span> at YuJa,
-                  previously shipped{' '}
-                  <span style={{ color: 'var(--green)' }}>data and ML systems</span> at CC&L, RBC Capital Markets and Bell,
-                  and did research on{' '}
-                  <span style={{ color: 'var(--cyan)' }}>LLM compression and algorithmic fairness</span> at UofT.
+                  I'm currently an{' '}
+                  <span style={{ color: 'var(--purple)' }}>ML/AI Engineer</span> at YuJa, building document AI and OCR
+                  systems. Before that I did{' '}
+                  <span style={{ color: 'var(--green)' }}>quant trading</span> at RBC Capital Markets,{' '}
+                  <span style={{ color: 'var(--cyan)' }}>quant research</span> at CC&L Investment Management, and{' '}
+                  <span style={{ color: 'var(--purple)' }}>ML research</span> at UofT, from building alpha signals on
+                  tick-level data to researching LLM compression and proportionally fair clustering.
                 </p>
                 <p>
-                  I care about code quality, evaluation, and getting systems to production — not just prototypes.
-                  Outside of work, I'm a sports enthusiast: cricket, soccer, and tennis.
+                  I love elegant mathematics, puzzles, and the thrill of turning noisy signals and mispricing in
+                  financial markets into a competitive edge. Outside of work, I'm a sports enthusiast: cricket,
+                  soccer, and tennis.
                 </p>
               </div>
 

@@ -1,12 +1,12 @@
 export const personal = {
   name: 'Jyotiraditya Gupta',
-  email: 'jyotiraditya.gupta@mail.utoronto.ca',
+  email: 'jyotiradityagupta09@gmail.com',
   linkedin: 'https://linkedin.com/in/jyotirgupta',
   github: 'https://github.com/jyotiraditya09',
   roles: [
-    'AI Engineer',
+    'ML/AI Engineer',
+    'Quantitative Researcher',
     'ML Engineer',
-    'Software Engineer',
   ],
   tagline: 'I build and ship production AI systems.',
   stats: [
@@ -16,21 +16,20 @@ export const personal = {
 
 export const education = {
   school: 'University of Toronto',
-  degree: 'Honours Bachelor\'s in Computer Science, Statistics & Mathematics',
+  degree: 'Honours BSc, Computer Science and Statistics (Double Major), Minor in Mathematics',
   period: 'Sep 2021 – Apr 2026',
   location: 'Toronto, ON',
   gpa: '3.91 / 4.0',
   ta: ['Introduction to Data Science', 'Calculus'],
   achievements: [
     'UofT International Scholarship ($100,000)',
-    "Dean's List Scholar (3×)",
+    "Dean's List Scholar (4×)",
     'New College Scholarship (3×)',
     'George Luste Prize in Physics ($1,500)',
   ],
   olympiads: [
     'JEE Physics 100 Percentile',
     'IChO National Qualifier',
-    'IMO National Qualifier (Stage 1)',
     'NTSE Scholar',
     'KVPY Scholar',
     'IGCSE World Topper',
@@ -150,24 +149,24 @@ export const research = [
 ]
 
 export const skills = {
-  'ML & AI': {
+  'Machine Learning': {
     color: '#00ff88',
     icon: '◈',
-    items: ['PyTorch', 'Neural Networks', 'Prompting', 'Model Compression', 'OCR', 'Evaluation'],
+    items: ['Deep Learning', 'Computer Vision', 'LLMs & Transformers', 'Model Compression', 'Statistical Learning', 'Clustering & Embeddings'],
   },
-  'Programming': {
+  'Quantitative Methods': {
     color: '#00d4ff',
-    icon: '</>',
-    items: ['Python', 'SQL', 'R', 'KDB/Q', 'C++', 'C', 'Java', 'Linux/Bash'],
+    icon: '∑',
+    items: ['Signal Research', 'Market Microstructure', 'Backtesting', 'Time-Series Analysis', 'Multivariate Statistics', 'Optimization'],
   },
-  'Production ML': {
+  'Languages': {
     color: '#8b5cf6',
-    icon: '⚙',
-    items: ['FastAPI', 'Workflow Automation', 'Data Pipelines', 'AWS', 'Docker', 'Kubernetes', 'Evaluation Harnesses'],
+    icon: '</>',
+    items: ['Python', 'C++', 'C', 'Java', 'R', 'SQL', 'KDB/Q'],
   },
-  'Tools': {
+  'Frameworks & Infra': {
     color: '#f59e0b',
-    icon: '⌘',
-    items: ['PyTorch', 'TensorFlow', 'Pandas', 'NumPy', 'Logstash / ELK', 'Docker', 'Git', 'Tableau'],
+    icon: '⚙',
+    items: ['PyTorch', 'TensorFlow', 'Pandas', 'NumPy', 'FastAPI', 'AWS', 'Docker', 'Kubernetes', 'Git', 'Linux'],
   },
 }
