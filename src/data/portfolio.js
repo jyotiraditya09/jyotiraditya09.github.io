@@ -11,7 +11,7 @@ export const personal = {
 }
 
 export const highlights = [
-  { value: '98%', label: 'OCR accuracy', context: 'YuJa · 5M PDFs a month' },
+  { value: '98%', label: 'OCR accuracy', context: 'YuJa · 5M documents a month' },
   { value: '1.2 → 2.25', label: 'Sharpe ratio', context: 'RBC Capital Markets' },
   { value: '+25 bps', label: 'Annualized alpha', context: 'CC&L' },
   { value: '84–87%', label: 'LLM-judge agreement', context: 'UofT fairness research' },

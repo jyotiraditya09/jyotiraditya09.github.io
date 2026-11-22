@@ -42,10 +42,7 @@ export default function Navbar() {
         scrolled ? 'border-line bg-canvas/85 backdrop-blur-md' : 'border-transparent'
       }`}
     >
-      <div className="page flex h-16 items-center justify-between">
-        <a href="#top" className="text-sm font-semibold tracking-tight text-ink">
-          {personal.name}
-        </a>
+      <div className="page flex h-16 items-center justify-end">
         <div className="flex items-center gap-7">
           <ul className="hidden items-center gap-7 text-sm md:flex">
             {LINKS.map(({ id, label }) => (
