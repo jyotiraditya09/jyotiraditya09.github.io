@@ -38,15 +38,15 @@ export default function About() {
                 <p>
                   I'm a{' '}
                   <span style={{ color: 'var(--text)', fontWeight: 600 }}>University of Toronto</span>
-                  {' '}graduate in Computer Science, Statistics & Mathematics, and an AI Engineer at YuJa.
+                  {' '}graduate in Computer Science, Statistics & Mathematics, and an ML/AI Engineer at YuJa.
                 </p>
                 <p>
                   I currently build{' '}
                   <span style={{ color: 'var(--purple)' }}>production AI systems</span> at YuJa,
                   previously shipped{' '}
-                  <span style={{ color: 'var(--green)' }}>data and ML systems</span> at CC&L and RBC Capital Markets,
-                  and work on{' '}
-                  <span style={{ color: 'var(--cyan)' }}>efficient LLMs</span> at UofT.
+                  <span style={{ color: 'var(--green)' }}>data and ML systems</span> at CC&L, RBC Capital Markets and Bell,
+                  and did research on{' '}
+                  <span style={{ color: 'var(--cyan)' }}>LLM compression and algorithmic fairness</span> at UofT.
                 </p>
                 <p>
                   I care about code quality, evaluation, and getting systems to production — not just prototypes.
