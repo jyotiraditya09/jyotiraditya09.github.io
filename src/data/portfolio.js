@@ -117,7 +117,7 @@ export const research = [
     title: 'Fairness in LLM Summarization',
     institution: 'Department of Computer Science, UofT',
     advisor: 'Prof. Nisarg Shah',
-    period: 'Jan 2026 – Jun 2026',
+    period: 'Jan 2026 – May 2026',
     figure: 'clusters',
     metrics: [
       { value: '84–87%', label: 'LLM-judge agreement' },
